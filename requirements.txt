@@ -1,4 +1,4 @@
 streamlit
 pandas
-pycaret.regression
+pycaret
 scikit-learn
