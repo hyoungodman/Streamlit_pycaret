@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
-from pycaret.regression import setup, compare_models
+#from pycaret.regression import setup, compare_models
+from pycaret import regression
 
 best_model = None  # 모델 비교 및 생성 결과를 저장하는 변수
 
@@ -28,10 +29,10 @@ def pycaret1():
 
         if button_compare and best_model is None:
             # Pycaret 설정
-            exp = setup(data, target=target_column, numeric_features=numeric_columns, normalize=True)
+            exp = regression.setup(data, target=target_column, numeric_features=numeric_columns, normalize=True)
 
             # 모델 비교 및 생성
-            best_model = compare_models()
+            best_model = regression.compare_models()
 
             # 모델 비교 및 생성 결과를 출력
             st.subheader("최적 모델")
