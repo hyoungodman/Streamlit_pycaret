@@ -38,4 +38,4 @@ def pycaret():
             st.write(best_model)
 
 if __name__ == "__main__":
-    pycaret1()
+    pycaret()
