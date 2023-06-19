@@ -5,7 +5,7 @@ from pycaret import regression
 
 best_model = None  # 모델 비교 및 생성 결과를 저장하는 변수
 
-def pycaret1():
+def pycaret():
     global best_model  # 전역 변수로 선언
 
     st.title("CSV 파일 업로드 및 변수 설정")
